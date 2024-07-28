@@ -2,7 +2,7 @@ import React from "react";
 
 function Card({dev}) {
   return (
-    <div className="max-w-[30rem]">
+    <div className="max-w-[20rem] m-3">
       <div className="course_image max-w-[20rem]">
         <img src={dev.image.url} alt={dev.image.alt} />
       </div>

@@ -8,6 +8,13 @@ function App() {
   
   const [courses, setCourses] = useState([]);
   const [loader,setLoader]=useState(true);
+  const [catTitle, setCatTitle] = useState('');
+
+  let category = [];
+  filterData.forEach(element => {
+    category.push(element.title)
+  });
+
   async function fetchData(){
     setLoader(true);
     try {
@@ -28,11 +35,16 @@ function App() {
    
   },[]) 
 
+  function categoryTitle(title){
+    setCatTitle(title);
+    // console.log(title);
+  }
+
   return (
     <>
-      <NavBar />
+      <NavBar categoryTitle={categoryTitle} />
       {
-        loader?<Spinner /> :<Main courses={courses} />
+        loader?<Spinner /> :<Main courses={courses} title={catTitle} category={category} />
       }
     </>
   )
