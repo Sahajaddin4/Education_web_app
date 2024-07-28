@@ -1,15 +1,13 @@
 import React from 'react'
+import Card from './card/Card';
 
-function Main() {
+function Main({courses}) {
+  //console.log(courses.Development);
+  let dev=courses.Development[0];
   return (
    <>
         <div className="container">
-            <div className="course_image">
-                <img src="" alt="" />
-            </div>
-            <div className="icon"></div>
-            <div className="title"></div>
-            <div className="desc"></div>
+            <Card dev={dev}/>
         </div>
    </>
   )

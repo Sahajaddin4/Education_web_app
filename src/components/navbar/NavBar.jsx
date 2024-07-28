@@ -12,7 +12,7 @@ function NavBar() {
               {filterData.map((data)=>{
                 return( <Button id={data.id} title={data.title} key={data.id} className='p-2 m-1'/>)
               })}
-              <button className='p-2 m-1 border rounded-lg'><span className='mx-1'>Explore more</span><i class="fa-solid fa-arrow-right"></i></button>
+              <button className='p-2 m-1 border rounded-lg'><span className='mx-1'>Explore more</span><i className="fa-solid fa-arrow-right"></i></button>
           </div>
           </div>
        </>
