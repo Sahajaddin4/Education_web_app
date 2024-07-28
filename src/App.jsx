@@ -38,6 +38,7 @@ function App() {
   function categoryTitle(title){
     setCatTitle(title);
     // console.log(title);
+    // hello World
   }
 
   return (
